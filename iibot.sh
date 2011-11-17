@@ -2,6 +2,8 @@
 # This somehow demonstrates "Quote! Unless you don't want to...
 # Irc servers and channels can't have spaces, so we're storing them in an associative array and using parameter expansion to make it a multilevel associative array, even three levels once we tr ":" " ".
 
+declare -x -A options
+
 source iibot_external.sh
 { source ~/.iibot.cfg || source /etc/iibot.cfg || source iibot.cfg || { echo "Could not load config, exitting"; exit 1; }; } 2>/dev/null
 
